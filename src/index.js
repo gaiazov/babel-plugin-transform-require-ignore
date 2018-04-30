@@ -39,7 +39,7 @@ export default function () {
           }
           const extensions = extensionsInput.map(extFix);
 
-          if (extensions.indexOf(path.extname(nodePath.node.source.value)) > -1) {
+          if (extensions.indexOf(path.extname(nodePath.node.source.value)) > -1 || nodePath.node.source.value === 'font-awesome') {
             const specifiers = nodePath.get('specifiers');
 
             if (specifiers.length) {
