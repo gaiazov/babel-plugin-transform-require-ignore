@@ -45,9 +45,12 @@ export default function () {
             if (specifiers.length) {
               const specifier = specifiers[specifiers.length - 1];
 
+              /*
               if (specifier.isImportDefaultSpecifier()) {
                 throw new Error(`${nodePath.node.source.value} should not be imported using default imports.`);
               }
+              */
+              
               if (specifier.isImportSpecifier()) {
                 throw new Error(`${nodePath.node.source.value} should not be imported using named imports.`);
               }
