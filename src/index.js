@@ -39,7 +39,9 @@ export default function () {
           }
           const extensions = extensionsInput.map(extFix);
 
-          if (extensions.indexOf(path.extname(nodePath.node.source.value)) > -1 || nodePath.node.source.value === 'font-awesome') {
+          if (extensions.indexOf(path.extname(nodePath.node.source.value)) > -1 || 
+              nodePath.node.source.value === 'font-awesome' || 
+              nodePath.node.source.value.endsWith('ButtonSkins')) {
             const specifiers = nodePath.get('specifiers');
 
             if (specifiers.length) {
